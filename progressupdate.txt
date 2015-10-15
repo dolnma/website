@@ -1,0 +1,18 @@
+﻿<?php
+@include_once('set.php');
+?>
+																					<?
+							$zapros="SELECT * FROM `game".$lastgame."`"; 
+							$str = mysql_query($zapros) or die('Ошибка БД'); 
+							$total=mysql_num_rows($str); 
+							if($procent <= 100) {
+							$procent = $total * 2;
+							}
+							else {
+							$procent = 100;
+							}
+							 ?>
+							<div id="container" style="margin-left: 28px;width: 494px; height: 30px; border: 4px solid black; background: #353535;">
+  <div id="progress-bar" style="width:<? echo ''.$procent.''; ?>%; background: #37ae31;height: 30px;">
+  </div>
+</div>
